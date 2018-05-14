@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TasksApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="250" Width="450" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="133*"/>
+        </Grid.RowDefinitions>
+
+        <Button Name="StartTaskBtn" Content="Начать работу" FontSize="20" HorizontalAlignment="Left" Padding="10,0"
+                Margin="50,30,0,0" Background="White" BorderBrush="#FF3966FF" Foreground="#FF1C3178" BorderThickness="3" Width="159" Click="StartTaskBtnClick"/>
+        <Button Name="CancelTaskBtn" Content="Отменить" FontSize="20" HorizontalAlignment="Right" Padding="10,0"
+                Margin="0,30,60,0" BorderBrush="Red" Foreground="#FF7E1010" Background="White" BorderThickness="3" Width="115" Click="CancelBtnClick"/>
+
+        <ProgressBar Name="TaskProgress" Grid.Row="1" VerticalAlignment="Center" Height="70" Margin="20,0"
+                     Background="#FFDADADA" Foreground="#FF10D635" BorderBrush="{x:Null}" BorderThickness="3"/>
     </Grid>
 </Window>
